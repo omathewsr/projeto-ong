@@ -7,8 +7,30 @@
   <title>Home</title>
 </head>
 
-<body>
+<header>
+  <H1>Bem-vindo a nossa ONG</H1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="projetos.html">Projetos</a></li>
+    <li><a href="cadastro.html">Cadastro</a></li>
+  </ul>
+</header>
 
+<body>
+  <form>
+    <h2>Assine nossa Newsletter</h2>
+    <label for="email">Email:</label>
+    <input type="email" required id="email" name="email" placeholder="email@email.com"><br>
+    <label for="telefone">Telefone:</label>
+    <input type="tel" name="telefone" pattern="\(\d{2}\)\s\d{5}-\d{4}" id="telefone" placeholder="(00) 00000-0000"
+      required><br><br>
+    <input type="checkbox" id="consent" name="consent" required>
+    <label for="consent">Eu concordo em receber comunicações por email.</label><br><br>
+    <input type="checkbox" id="consent2" name="consent2" required>
+    <label for="consent2">Eu concordo em receber comunicações por SMS.</label><br><br>
+    <input type="submit" value="Assinar">
+  </form>
 </body>
+<footer>Desenvolvido por Mathews Rodrigues</footer>
 
 </html>
