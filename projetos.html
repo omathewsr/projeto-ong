@@ -1,14 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Projetos</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
+<header>
+  <H1>Bem-vindo a nossa ONG Cuidando dos Abandonados</H1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="projetos.html">Projetos</a></li>
+    <li><a href="cadastro.html">Cadastro</a></li>
+  </ul>
+</header>
 
 <body>
 
+  <main class="container">
+
+    <section id="inscricao" class="card">
+      <h2>Faça uma doação!</h2>
+      <form action="#" method="post" novalidate>
+        <fieldset>
+          <legend>Dados pessoais</legend>
+          <label for="nome">Pix</label>
+          <input id="nome" name="nome" required minlength="3">
+          <label for="email">Cartão de Crédito</label>
+          <input id="email" name="email" type="email" required>
+          <label for="valor">Valor</label>
+          <input type="number" id="valor" name="valor" type="number" min="1" placeholder="Valor da doação (R$)"
+            required>
+        </fieldset>
+
+        <button type="button">Enviar doação</button>
+      </form>
+
+    </section>
+
+    <h2>Voluntariado</h2>
+    <p>
+      Nosso trabalho é movido por um amor incondicional aos cães, mas é sustentado pela dedicação e pelo coração dos
+      nossos voluntários. Cada resgate, cada recuperação e cada adoção feliz só são possíveis graças à generosidade de
+      pessoas como você.
+
+      Ser voluntário na nossa ONG é mais do que dedicar tempo; é uma oportunidade de colocar seu amor em ação e
+      transformar a vida de cães que sofreram com o abandono e os maus-tratos.
+    </p>
+
+    <h3>
+      Como Você Pode Ajudar
+    </h3>
+    <p>
+      O voluntariado vai muito além de cuidar diretamente dos cães em nosso abrigo. Suas habilidades e seu tempo são
+      valiosos em diversas áreas:
+    </p>
+    <ol>
+      <li>
+        Cuidado Direto e Operacional
+      </li>
+      <li>
+        Ajuda Remota e Estratégica
+      </li>
+    </ol>
+    <h3>
+      O Que Esperamos de Você
+    </h3>
+    <p>
+      O único requisito obrigatório é ter paixão pela causa animal e comprometimento. O trabalho em uma ONG exige
+      responsabilidade, pontualidade e, em muitos momentos, força emocional. Mas a recompensa — o olhar de um cão
+      resgatado e a alegria de vê-lo encontrar um lar — é imensurável.
+    </p>
+    <p>Para se candidatar ao voluntariado, preencha nosso <a href="cadastro.html">formulário</a> ou entre em contato.
+    </p>
+  </main>
+
+  <footer class="container small">Desenvolvido por Mathews Rodrigues</footer>
+
+  <script src="js/main.js"></script>
 </body>
 
 </html>
