@@ -7,8 +7,95 @@
   <title>Cadastro</title>
 </head>
 
-<body>
+<header>
+  <H1>Bem-vindo a nossa ONG Cuidando dos Abandonados</H1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="projetos.html">Projetos</a></li>
+    <li><a href="cadastro.html">Cadastro</a></li>
+  </ul>
+</header>
 
+<body>
+  <main class="container">
+    <h2>Cadastre-se como Voluntário</h2>
+    <form action="#" method="post" enctype="multipart/form-data" novalidate>
+
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+
+        <label for="v-nome">Nome Completo</label>
+        <input id="v-nome" name="nome" type="text" pattern="[A-Za-zÀ-ÿ\s]+"
+          title="O nome deve conter apenas letras e espaços." required>
+
+        <label for="v-email">Email</label>
+        <input id="v-email" name="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          title="Insira um email válido (ex: seu.nome@exemplo.com)." required>
+
+        <label for="v-cpf">CPF</label>
+        <input id="v-cpf" name="cpf" type="text" data-mask="cpf" inputmode="numeric"
+          pattern="^\d{3}\.\d{3}\.\d{3}-\d{2}$" title="O CPF deve estar no formato 000.000.000-00." maxlength="14"
+          required>
+
+        <label for="v-nasc">Data de Nascimento</label>
+        <input id="v-nasc" name="data_nasc" type="date" required>
+
+        <label for="v-telefone">Telefone</label>
+        <input id="v-telefone" name="telefone" type="tel" data-mask="phone" inputmode="tel"
+          pattern="^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$"
+          title="Insira um telefone válido (ex: (11) 98765-4321 ou (11) 8765-4321)." maxlength="15" required>
+
+        <label for="v-endereco">Endereço (Rua e Número)</label>
+        <input id="v-endereco" name="endereco" type="text" required>
+
+        <label for="v-cidade">Cidade</label>
+        <input id="v-cidade" name="cidade" type="text" required>
+
+        <label for="v-estado">Estado</label>
+        <input id="v-estado" name="estado" type="text" required>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Habilidades e Disponibilidade</legend>
+
+        <div class="habilidades-group">
+          <label>Quais áreas você pode atuar?</label>
+          <label>
+            <input type="checkbox" name="skill[]" value="ensino">Administração
+          </label>
+          <label>
+            <input type="checkbox" name="skill[]" value="saude">Finanças
+          </label>
+          <label>
+            <input type="checkbox" name="skill[]" value="logistica">Veterinária
+          </label>
+          <label>
+            <input type="checkbox" name="skill[]" value="marketing">Doações
+          </label>
+          <label>
+            <input type="checkbox" name="skill[]" value="cuidados">Marketing
+          </label>
+        </div>
+
+        <label for="disponibilidade">Qual a sua principal disponibilidade de turno?</label>
+        <select id="disponibilidade" name="disponibilidade" required>
+          <option value="">-- selecione --</option>
+          <option value="manha">Manhã</option>
+          <option value="tarde">Tarde</option>
+          <option value="noite">Noite</option>
+          <option value="fins_semana">Fins de Semana</option>
+        </select>
+
+        <label for="v-obs">Fale um pouco sobre sua experiência ou motivação (opcional):</label>
+        <textarea id="v-obs" name="observacao" rows="4"></textarea>
+
+      </fieldset>
+
+      <button type="submit">Cadastrar Voluntário</button>
+    </form>
+  </main>
 </body>
+<footer>Desenvolvido por Mathews Rodrigues</footer>
 
 </html>
