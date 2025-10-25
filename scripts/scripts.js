@@ -1,18 +1,22 @@
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburgerMenu = document.querySelector('.hamburger-menu');
+  const mainNav = document.querySelector('.main-nav');
+  const hasSubmenu = document.querySelectorAll('.has-submenu');
 
-document.addEventListener('DOMContentLoaded', ()=>{
-  if('IntersectionObserver' in window){
-    const io = new IntersectionObserver((entries, obs)=>{
-      entries.forEach(en=>{
-        if(en.isIntersecting){
-          const img = en.target;
-          if(img.dataset.src){
-            img.src = img.dataset.src;
-            img.removeAttribute('data-src');
-          }
-          io.unobserve(img);
-        }
-      });
-    }, {rootMargin: "50px"});
-    document.querySelectorAll('img[data-src]').forEach(i=> io.observe(i));
+  if (hamburgerMenu) {
+    hamburgerMenu.addEventListener('click', function() {
+      mainNav.classList.toggle('active');
+      this.classList.toggle('active');
+    });
   }
+
+  hasSubmenu.forEach(function(item) {
+    const link = item.querySelector('a');
+    link.addEventListener('click', function(event) {
+      if (window.innerWidth <= 768 && item.classList.contains('has-submenu')) {
+        event.preventDefault();
+        item.classList.toggle('active');
+      }
+    });
+  });
 });

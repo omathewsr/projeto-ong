@@ -11,14 +11,27 @@
 
 <body>
   <header>
-    <p class="header-title">Bem-vindo a nossa ONG Cuidando dos Abandonados</p>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projetos.html">Projetos</a></li>
-        <li><a href="cadastro.html">Cadastro</a></li>
-      </ul>
-    </nav>
+    <div class="header-container">
+      <p class="header-title">Bem-vindo a nossa ONG Cuidando dos Abandonados</p>
+      <button class="hamburger-menu" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="has-submenu">
+            <a href="projetos.html">Projetos</a>
+            <ul class="submenu">
+              <li><a href="projetos.html#inscricao">Doação</a></li>
+              <li><a href="projetos.html#voluntariado">Voluntariado</a></li>
+            </ul>
+          </li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
     <img src="assets/varios-caes.jpg" alt="Banner com cachorros" class="image-home">
   </header>
 
