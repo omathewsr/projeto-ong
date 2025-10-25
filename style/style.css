@@ -205,6 +205,13 @@ label {
   margin-top: 20px;
 }
 
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  display: block;
+  margin-top: 5px;
+}
+
 
 @media (max-width: 768px) {
   .main-nav {
